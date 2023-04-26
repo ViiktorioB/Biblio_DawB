@@ -1,6 +1,7 @@
 package orientadoBiblioB;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Bibliotecario extends Usuario {
 
@@ -54,4 +55,20 @@ public class Bibliotecario extends Usuario {
             return "Bibliotecario [puestoTrabajo=" + puestoTrabajo + ", nif=" + nif + ", contrasena=" + contrasena + "]";
         }
     
+
+        @Override
+        public void solicitarDatosPersona() {
+            super.solicitarDatosPersona();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Nif: ");
+            this.nif = scanner.nextLine();
+
+            Scanner puesto = new Scanner(System.in);
+            System.out.print("Puesto?: ");
+            this.puestoTrabajo = puesto.nextLine();
+
+            Scanner con = new Scanner(System.in);
+            System.out.print("Contaseña: ");
+            this.contrasena = con.nextLine();
+        }
 }

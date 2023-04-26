@@ -1,6 +1,7 @@
 package orientadoBiblioB;
 
     import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuario extends Persona {
 
@@ -76,6 +77,26 @@ public class Usuario extends Persona {
     public String toString() {
         return "Usuario [nombre "+ getNombre() +" apellidos "+ getApellido1()+ " "+ getApellido2() +" telefono=" + telefono + ", direccion=" + direccion + ", codigoPostal=" + codigoPostal
                 + ", correoElectronico=" + correoElectronico + ", reservas=" + reservas + "]";
+    }
+
+    @Override
+    public void solicitarDatosPersona() {
+        super.solicitarDatosPersona();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Telefono?: ");
+        this.telefono = scanner.nextLine();
+
+        Scanner direeccion = new Scanner(System.in);
+        System.out.print("Direccion?: ");
+        this.direccion = direeccion.nextLine();
+
+        Scanner correo = new Scanner(System.in);
+        System.out.print("Correo?: ");
+        this.correoElectronico = correo.nextLine();
+
+        Scanner cp = new Scanner(System.in);
+        System.out.print("Codigo Postal?: ");
+        this.codigoPostal = cp.nextLine();
     }
 
 }

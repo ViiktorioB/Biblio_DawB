@@ -1,5 +1,7 @@
 package orientadoBiblioB;
 
+import java.util.Scanner;
+
 public class Persona {
   
     private String nombre;
@@ -63,6 +65,19 @@ public class Persona {
                 + "]";
     }
 
+    public void solicitarDatosPersona() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre: ");
+        this.nombre = scanner.nextLine();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el apellido: ");
+        this.apellido1 = sc.nextLine();
+
+        Scanner sc_edad = new Scanner(System.in);
+        System.out.print("Ingrese la edad: ");
+        this.edad = scanner.nextInt();
+    }
     
 }
 
